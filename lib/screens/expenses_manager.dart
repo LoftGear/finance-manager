@@ -1,3 +1,5 @@
+import 'package:finance_manager/components/add_button.dart';
+import 'package:finance_manager/widgets/expenses_list.dart';
 import 'package:flutter/material.dart';
 
 class ExpensesManager extends StatelessWidget {
@@ -7,7 +9,12 @@ class ExpensesManager extends StatelessWidget {
       appBar: AppBar(
         title: Text("Expenses"),
       ),
-      body: Text("Hello world"),
+      body: Column(
+        children: [
+          ExpensesList(),
+          AddButton(),
+        ],
+      )
     );
   }
 }
